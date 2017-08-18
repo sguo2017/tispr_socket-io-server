@@ -41,7 +41,7 @@ io.on('connection', function (socket) {
       });
     }
 
-    saveMessage(data.chatRoomId, data.senderId, data.message);
+    saveMessage(data.deal_id, data.chatRoomId, data.senderId, data.message);
   });
 
   socket.on('disconnect', function () {
@@ -51,9 +51,9 @@ io.on('connection', function (socket) {
 });
 
 
-function saveMessage(cid, uid, msg) {
+function saveMessage(did, cid, uid, msg) {
   var options = {
     queue: 'default'
   };
-  sidekiq.enqueue("ChatWorker", [cid, uid, msg], options);
+  sidekiq.enqueue("ChatWorker", [did, cid, uid, msg], options);
 }

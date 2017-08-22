@@ -2,6 +2,10 @@
   "name": "tispr_socket-io-server",
   "version": "0.0.1",
   "description": "socket.io server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sguo2017/tispr_socket-io-server.git"
+  },  
   "dependencies": {
     "express": "^4.13.4",
     "redis": "^2.6.0-2",

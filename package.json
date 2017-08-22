@@ -1,5 +1,5 @@
 {
-  "name": "socket-io-server",
+  "name": "tispr_socket-io-server",
   "version": "0.0.1",
   "description": "socket.io server",
   "dependencies": {
